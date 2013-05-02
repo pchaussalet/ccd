@@ -23,22 +23,18 @@
      <script>
       <!--
   $(document).ready(function() {
+    // Set layout (columns and rows count) here
     var nb_cols = 5;
     var nb_rows = 4;
+
+    // Set cube evaluator service location (IP address and TCP port) here
     var cube_ip = '127.0.0.1';
     var cube_port = 1081;
 
     initializeDashboard(nb_cols, nb_rows, cube_ip, cube_port);
-    startDate = new Date(new Date().setHours(new Date().getHours()-1)).toISOString();
-    addGraphs(['median(localhost_cpu(iowait))','median(localhost_cpu(nice))','median(localhost_cpu(steal))','median(localhost_cpu(system))','median(localhost_cpu(user))'], 
-              'A', '0', 
-              {start: startDate, stop: new Date().toISOString(), renderer: 'line'});
-    addGraphs(['median(localhost_mem(memory*1024))','median(localhost_mem(buffers*1024))','median(localhost_mem(cached*1024))','median(localhost_mem(commit*1024))','median(localhost_mem(inactive*1024))','median(localhost_mem(memfree*1024))','median(localhost_mem(memused*1024))'], 
-              'A', '1', 
-              {start: startDate, stop: new Date().toISOString(), renderer: 'area'});
-    addTrafficLight('localhost_state(value)', 
-                    'B', '0', 
-                    {'OK': '00ff00', 'KO': 'ff0000'});
+
+    // Add your graphs here
+
   });
       -->
     </script>
