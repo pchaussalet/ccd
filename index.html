@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="assets/css/rickshaw.min.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <script src="assets/js/jquery.js"></script>
+    <div class="container-fluid" id="dashboard">
+    </div><!--/.fluid-container-->
+
+     <script>
+      <!--
+  $(document).ready(function() {
+    var nb_cols = 5;
+    var nb_rows = 4;
+    var cube_ip = '127.0.0.1';
+    var cube_port = 1081;
+
+    initializeDashboard(nb_cols, nb_rows, cube_ip, cube_port);
+    startDate = new Date(new Date().setHours(new Date().getHours()-1)).toISOString();
+    addGraphs(['median(localhost_cpu(iowait))','median(localhost_cpu(nice))','median(localhost_cpu(steal))','median(localhost_cpu(system))','median(localhost_cpu(user))'], 
+              'A', '0', 
+              {start: startDate, stop: new Date().toISOString(), renderer: 'line'});
+    addGraphs(['median(localhost_mem(memory*1024))','median(localhost_mem(buffers*1024))','median(localhost_mem(cached*1024))','median(localhost_mem(commit*1024))','median(localhost_mem(inactive*1024))','median(localhost_mem(memfree*1024))','median(localhost_mem(memused*1024))'], 
+              'A', '1', 
+              {start: startDate, stop: new Date().toISOString(), renderer: 'area'});
+    addTrafficLight('localhost_state(value)', 
+                    'B', '0', 
+                    {'OK': '00ff00', 'KO': 'ff0000'});
+  });
+      -->
+    </script>
+
+
+    <script src="assets/js/jquery.textFit.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/d3.v3.min.js"></script>
+    <script src="assets/js/rickshaw.min.js"></script>
+
+    <script src="assets/js/dashboard/params.js"></script>
+    <script src="assets/js/dashboard/utils.js"></script>
+    <script src="assets/js/dashboard/widgets.js"></script>
+</body>
+</html>

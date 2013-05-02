@@ -1,0 +1,47 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #666;
+}
+
+div.container-fluid {
+  padding: 0;
+}
+
+div {
+  margin: 1px !important;
+}
+
+div.span4 > div {
+  border: solid 1px #404040;
+}
+
+.x_tick {
+  background-color: white;
+  opacity: 0.5;
+}
+
+.y_ticks {
+  stroke: white;
+  fill: white;
+  opacity: 0.5;
+}
+
+.graph {
+  overflow: hidden;
+  margin: 0;
+  border: solid 0 black;
+  background-color: #000;
+}
+
+.graph div {
+}
+
+.title, .value {
+  color: #fff;
+}
+.value {
+  display: block;
+  float: right;
+  margin-left: 1em;
+}
